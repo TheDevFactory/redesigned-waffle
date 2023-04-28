@@ -53,6 +53,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "rollbar.contrib.django.middleware.RollbarNotifierMiddleware",
 ]
 
 X_FRAME_OPTIONS = "ALLOW-FROM preview.app.github.dev"
@@ -133,3 +134,10 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+ROLLBAR = {
+    'access_token': 'b80e8b3e927a4a4d896bc0451b9e7f41',
+    'environment': 'development' if DEBUG else 'production',
+    'code_version': '1.0',
+    'root': '/workspaces/codespaces-django',
+}
