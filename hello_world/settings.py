@@ -136,7 +136,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 ROLLBAR = {
-    'access_token': 'b80e8b3e927a4a4d896bc0451b9e7f41',
+    'access_token': '207625eaf12847cbbb23050e448ce0c3',
     'environment': 'production',
     'code_version': '45beac1db1f354d027ffe4a76aef0d81b3a859ca',
     'root': '/workspaces/codespaces-django',
