@@ -139,5 +139,5 @@ ROLLBAR = {
     'access_token': 'b80e8b3e927a4a4d896bc0451b9e7f41',
     'environment': 'production',
     'code_version': '45beac1db1f354d027ffe4a76aef0d81b3a859ca',
-    'root': '/TheDevFactory/redesigned-waffle',
+    'root': '/workspaces/codespaces-django',
 }
