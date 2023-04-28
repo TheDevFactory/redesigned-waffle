@@ -22,11 +22,21 @@
             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ </td>
             <td><img src="https://logos-world.net/wp-content/uploads/2022/11/Splunk-Emblem.png" class="App-logo" alt="logo" style="height: 100px;" /></td>
           </tr>
+          <tr>
+            <td colspan="3">
+              Discover | Prioritize | Resolve | Automate | Improve
+            </td>
+          </tr>
           </table>
-
-            <img src="{% static 'Octocat.png' %}" class="App-logo" alt="logo" style="width: 50px; height: 50px;" />
-            <p>
-                Developers <span class="heart">♥️</span> Rollbar
+            <p class="small">
+              <br><br>
+              Developers <span class="heart">♥️</span> Rollbar
+              <br><br>
+            </p>
+            <img src="{% static 'Octocat.png' %}" class="App-logo" alt="logo" style="width: 20px; height: 20px;" />
+            <p class="small">
+                Created using GitHub Codespaces
+                <br><br>
             </p>
             <p class="small">
                 Edit <code>CODE</code> and see changes live!
@@ -46,14 +56,15 @@
             context: window.location.pathname,
             client: {
               javascript: {
-                code_version: '92cd8fb5d4e9a3c9e2cca799be91e74ac0f4633e',
+                code_version: 'c716475ec15e1edeed9fba48c500d3ecd384484a',
                 // source_map_enabled: true,
                 guess_uncaught_frames: true
               }
             },
             server: {
-                root: "/workspaces/codespaces-django",
-                branch: "master",
+                //host: "https://thedevfactory-redesigned-waffle-j9xj9vxpj7fp6pp-8000.preview.app.github.dev/",
+                root: "https://thedevfactory-redesigned-waffle-j9xj9vxpj7fp6pp-8000.preview.app.github.dev/",
+                //branch: "master",
             }
         }
     };
@@ -67,7 +78,7 @@
 
 <script>
 
-function add(x, y) {
+function remove(x, y) {
   if (typeof x !== 'number') {
     throw 'The first argument must be a number';
   }
@@ -77,8 +88,11 @@ function add(x, y) {
   return x + y;
 }
 
-const result = add('a', 10);
-console.log(result);
+//const result = add('abc', 10);
+//console.log(result);
+
+const result2 = remove('xyz', 10);
+console.log(result2);
 
 </script>
 
