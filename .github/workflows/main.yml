@@ -1,14 +1,8 @@
-# This is a basic workflow to help you get started with Actions
 name: Rollbar deploy
-  uses: rollbar/github-deploy-action@2.0.0
-  with:
-    environment: 'production'
-    version: ${{ github.sha }}
-  env:
-    ROLLBAR_ACCESS_TOKEN: 'b8fc2b2557d44ea49e872a4703da07f8'
-    ROLLBAR_USERNAME: 'thedevfactory'
-    LOCAL_USERNAME: 'TheDevFactory'
-
-
-
-
+  # You may pin to the exact commit or the version.
+  # uses: rollbar/github-deploy-action@eaf2a60ea238bd273226eee0ddceecfe5611964d
+uses: rollbar/github-deploy-action@2.1.2
+with:
+  environment: 'production'
+  version: ${{ github.sha }}
+  local_username: 'TheDevFactory'
