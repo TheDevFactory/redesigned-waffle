@@ -1,4 +1,4 @@
-name: Rollbar deploy
+name: CI
 
 # Controls when the action will run.
 on:
@@ -7,17 +7,29 @@ on:
     branches: [master]
   pull_request:
     branches: [master]
-    
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  uses: rollbar/github-deploy-action@2.1.2  
-  with:
-    environment: 'production'
-    version: ${{ github.sha }}
-  env:
-    ROLLBAR_ACCESS_TOKEN: '867a5b69114644f0a4b4e68a0bd4972f'
-    ROLLBAR_USERNAME: 'thedevfactory'
-    LOCAL_USERNAME: 'TheDevFactory'
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Rollbar deploy
+        uses: rollbar/github-deploy-action@2.0.0
+        with:
+          environment: 'production'
+          version: ${{ github.sha }}
+        env:
+          ROLLBAR_ACCESS_TOKEN: '867a5b69114644f0a4b4e68a0bd4972f'
+          ROLLBAR_USERNAME: 'thedevfactory'
+          LOCAL_USERNAME: 'TheDevFactory'
