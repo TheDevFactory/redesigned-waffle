@@ -12,3 +12,5 @@ To run this application:
 python manage.py runserver
 ```
 Rollbar Demo Code.
+
+[![CI](https://github.com/TheDevFactory/redesigned-waffle/actions/workflows/main.yml/badge.svg)](https://github.com/TheDevFactory/redesigned-waffle/actions/workflows/main.yml)
