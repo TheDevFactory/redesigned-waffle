@@ -28,6 +28,6 @@ jobs:
           environment: 'production'
           version: ${{ github.sha }}
         env:
-          ROLLBAR_ACCESS_TOKEN: '867a5b69114644f0a4b4e68a0bd4972f'
+          ROLLBAR_ACCESS_TOKEN: 'ff154272cf62432baaa5d500675b9db0'
           ROLLBAR_USERNAME: 'thedevfactory'
           LOCAL_USERNAME: 'TheDevFactory'
