@@ -12,3 +12,17 @@ def index(request):
             "title": "Django example",
         },
     )
+
+
+def start(request):
+    
+    #b = None
+    #b.start() # Creating an error with an invalid line of code
+
+    return render(
+        request,
+        "start.html",
+        {
+            "title": "Django example",
+        },
+    )

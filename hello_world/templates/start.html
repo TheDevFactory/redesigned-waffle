@@ -1,0 +1,102 @@
+{% load django_browser_reload %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Rollbar Onboarding Demo - {{ title }}</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+
+
+
+
+
+<body>
+    <div class="App">
+        <header class="App-header">
+          <h3> Rollbar Quick Setup </h3>
+          <p class="small">
+           Rollbar Demo App, Django (Python) Backend with Javascript Frontend.
+          </p>
+          <table>
+          <tr>
+            <td><img src="https://cdn.rollbar.com/wp-content/themes/rollbar/assets/img/logo-white-rollbar.svg" class="App-logo" alt="logo" style="width: 130px;" /></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ </td>
+            <td><img src="https://logos-world.net/wp-content/uploads/2022/11/Splunk-Emblem.png" class="App-logo" alt="logo" style="height: 100px;" /></td>
+          </tr>
+          <tr>
+            <td colspan="3">
+                <button id="btnExecute" name="btnExecute" style="height: 80px;" class="button">Buy Now</button>
+                <br><br><br>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              Discover | Prioritize | Resolve | Automate | Improve
+            </td>
+          </tr>
+          </table>
+            <p class="small">
+              <br><br>
+              Developers <span class="heart">♥️</span> Rollbar
+              <br><br>
+            </p>
+            <img src="{% static 'Octocat.png' %}" class="App-logo" alt="logo" style="width: 20px; height: 20px;" />
+            <p class="small">
+                Created using GitHub Codespaces
+                <br><br>
+            </p>
+            <p class="small">
+                Edit <code>CODE</code> and see changes live!
+            </p>
+        </header>
+    </div>
+</body>
+
+
+<style>
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+</style>
+
+<script>
+
+function remove(x, y) {
+  if (typeof x !== 'number') {
+    throw 'The first argument must be a number';
+  }
+  if (typeof y !== 'number') {
+    throw 'The second argument must be a number';
+  }
+  return x + y;
+}
+
+document.getElementById("btnExecute").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("btnExecute").innerHTML = "Transaction Failed!";
+  document.getElementById("btnExecute").style.backgroundColor = "#dc143c";
+
+  const resultError = remove('abs', 5);
+  console.log(resultError);
+
+}
+
+</script>
+
+
+</html>
