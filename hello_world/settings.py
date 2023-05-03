@@ -138,6 +138,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 ROLLBAR = {
     'access_token': 'b80e8b3e927a4a4d896bc0451b9e7f41',
     'environment': 'production',
-    'code_version': '15eb7cbcff510fbae9b24002b5dd8496b4b6ab76',
+    'code_version': '01b0b16e501d2477cbefda94d47ca6017ca9fa5f',
     'root': '/workspaces/codespaces-django',
 }
