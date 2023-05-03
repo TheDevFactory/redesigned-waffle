@@ -23,6 +23,6 @@ def start(request):
         request,
         "start.html",
         {
-            "title": "Django example",
+            "title": "Onboaring example",
         },
     )
