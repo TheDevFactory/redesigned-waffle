@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-    <title>Rollbar + Spunk Demo - {{ title }}</title>
+    <title>Rollbar Demo - {{ title }}</title>
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 
@@ -20,7 +20,9 @@
           <tr>
             <td><img src="https://cdn.rollbar.com/wp-content/themes/rollbar/assets/img/logo-white-rollbar.svg" class="App-logo" alt="logo" style="width: 130px;" /></td>
             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ </td>
-            <td><img src="https://curity.io/images/integrations/pagerduty-og.jpg" style="width:180px;"></td>
+            <td>
+              <img src="https://www.bannekerpartners.com/storage/app/media/Banneker_logo_RGB_blue.png" class="App-logo" alt="logo" style="height: 40px; background-color: white; padding: 5px 5px 5px 5px;"> 
+            </td>
           </tr>
           <tr>
             <td colspan="3">
@@ -57,20 +59,20 @@
             context: window.location.pathname,
             client: {
               javascript: {
-                code_version: '01b0b16e501d2477cbefda94d47ca6017ca9fa5f',
+                code_version: 'b9cc2e8229902ace957c409fba087baa890187aa',
                 // source_map_enabled: true,
                 guess_uncaught_frames: true
               }
             },
             server: {
-                host: "https://thedevfactory-redesigned-waffle-j9xj9vxpj7fp6pp-8000.preview.app.github.dev/",
-                root: "https://thedevfactory-redesigned-waffle-j9xj9vxpj7fp6pp-8000.preview.app.github.dev/",
+                host: "http://127.0.0.1:8000/",
+                root: "http://127.0.0.1:8000/",
                 //branch: "master",
             },
             person: {
-              id: 007, // required 
-              username: 'Bond.James',
-              email: 'jamesbond@mi5.org'
+              id: 008, // required 
+              username: 'Evans.Kurt',
+              email: 'kurtevans@mi5.org'
             }
         },
         transform: function (payload) {
@@ -84,8 +86,8 @@
           //payload.elasticTraceId = elasticApm.traceId;
           //payload.elasticTransactionName = "index.html";
 
-          ////Splunk RUM - Recording Session Id
-          //payload.rumSessionId = SplunkRum.getSessionId();
+          //Splunk RUM - Recording Session Id
+          payload.rumSessionId = SplunkRum.getSessionId();
 
           return payload;
 
