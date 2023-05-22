@@ -5,8 +5,8 @@ def index(request):
     varFirstname = "Nico"
     varSurname = "Krüger"
 
-    #a = None
-    #a.hello() # Creating an error with an invalid line of code
+    a = None
+    a.hello() # Creating an error with an invalid line of code
 
     return render(
         request,
